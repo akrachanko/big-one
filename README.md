@@ -2,8 +2,6 @@
 
 This is my Github where I keep my code I need access to. 
 
-```
-
 ## Contributing
 Pull requests are welcome. 
 
