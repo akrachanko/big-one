@@ -1,9 +1,16 @@
-##################################
+###########################################
 # First test of 7 segment display
 # on RPi Pico. Digits of Pi
 #
 # Author: Aleks Krachanko
-##################################
+#
+# Description: This is a small piece of 
+# code that uses a Raspberry Pi Pico
+# to print the digits of pi to a 7 
+# segment display. The pi_digits 
+# variable sets to what precision this 
+# is done (number of digits after decimal)
+###########################################
 
 from machine import Pin
 import time 
@@ -11,7 +18,7 @@ import time
 pi_digits = 1000 # the precision of pi you'd like
 ellipsis_length = 10 # length of ellipsis before starting from first digit again
 
-seg_pins = [0,1,2,3,4,5,6,7] # GPIO pins where 7 segment is connected
+seg_pins = [0,1,2,3,4,5,6,7] # GPIO pins where 7 segment is connected (set accordingly)
 
 segments = [Pin(seg_pins[0],Pin.OUT),  # sets up segments array for 7 segment display
             Pin(seg_pins[1],Pin.OUT),
