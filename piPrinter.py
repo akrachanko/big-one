@@ -77,11 +77,7 @@ def clear_segments():  # function clears the 7seg display
         seg.low()
 
 
-# generator function to caluclate pi to a certain precision
-# adapted from MrBlaise's code:
-# https://github.com/MrBlaise/learnpython/blob/master/Numbers/pi.py
-######### BEGIN ##########################
-def calcPi(limit):  
+def calcPi(limit):  # generator function for pi
     q, r, t, k, n, l = 1, 0, 1, 1, 3, 3  
                                          
     decimal = limit
@@ -89,12 +85,9 @@ def calcPi(limit):
 
     while counter != decimal + 1:
             if 4 * q + r - t < n * t:
-                    # yield digit
                     yield n
-                    # insert period after first digit
                     if counter == 0:
                             yield '.'
-                    # end
                     if decimal == counter:
                             print('')
                             break
@@ -112,7 +105,6 @@ def calcPi(limit):
                     k += 1
                     n = nn
                     r = nr
-######## END #############################
                     
 ###################################################
 
